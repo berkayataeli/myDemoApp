@@ -48,9 +48,7 @@ public class AppTest
 	
 	public void testEmptyList(){
 		ArrayList<Integer> arr1 = new ArrayList<>();
-		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
-		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
-		assertEquals(new App().mySearch(arr1, arr2, arr3, 10),2);	
+		assertEquals(new App().mySearch(arr1, arr1, arr1, 10),0);	
 	}
 	
 	public void testDiffSizeList(){
@@ -60,7 +58,21 @@ public class AppTest
 		assertEquals(new App().mySearch(arr1, arr2, arr3, 20),7);
 	}
 	
-
+	public void testNull1(){
+		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
+		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
+		assertEquals(new App().mySearch(null, arr2, arr3, 5),2);
+	}
+	public void testNull2(){
+		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
+		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
+		assertEquals(new App().mySearch(arr2, null, arr3, 5),2);
+	}
+	public void testNull3(){
+		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
+		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
+		assertEquals(new App().mySearch(arr3, arr2, null, 5),2);
+	}
 
 
 
