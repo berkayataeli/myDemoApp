@@ -25,6 +25,10 @@ public class App
 
     public static int mySearch(ArrayList<Integer> arr1, ArrayList<Integer> arr2, ArrayList<Integer> arr3, int a){
 	int counter = 0;
+	
+	if(arr1 == null || arr2 == null || arr3 == null){
+		return 0;	
+	}
 	for(int elt : arr1){
 		if(elt <= a){
 			counter++;	

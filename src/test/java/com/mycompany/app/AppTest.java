@@ -61,17 +61,17 @@ public class AppTest
 	public void testNull1(){
 		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
 		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
-		assertEquals(new App().mySearch(null, arr2, arr3, 5),2);
+		assertEquals(new App().mySearch(null, arr2, arr3, 5),0);
 	}
 	public void testNull2(){
 		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
 		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
-		assertEquals(new App().mySearch(arr2, null, arr3, 5),2);
+		assertEquals(new App().mySearch(arr2, null, arr3, 5),0);
 	}
 	public void testNull3(){
 		ArrayList<Integer> arr2 = new ArrayList<>(Arrays.asList(19,12,38,40,55,98));
 		ArrayList<Integer> arr3 = new ArrayList<>(Arrays.asList(15,2,3,41,23));
-		assertEquals(new App().mySearch(arr3, arr2, null, 5),2);
+		assertEquals(new App().mySearch(arr3, arr2, null, 5),0);
 	}
 
 
