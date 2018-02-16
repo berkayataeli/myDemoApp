@@ -1,4 +1,5 @@
-  "language": "ruby",
+  "language": "java",
+  "jdk": "oraclejdk8",
   "group": "stable",
   "dist": "trusty",
   "os": "linux"
